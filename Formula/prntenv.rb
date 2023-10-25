@@ -5,20 +5,20 @@
 class Prntenv < Formula
   desc "Utility to print out the names and values of the variables in the environment"
   homepage "https://github.com/jcouture/prntenv"
-  version "0.1.1"
+  version "0.1.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jcouture/prntenv/releases/download/0.1.1/prntenv_0.1.1_darwin_amd64.tar.gz"
-      sha256 "1b4f473c213cb0a4eeb9a91ec088723c11e6a85425403d5709df1be32e45c688"
+      url "https://github.com/jcouture/prntenv/releases/download/0.1.5/prntenv_0.1.5_darwin_amd64.tar.gz"
+      sha256 "5743a7c5a63bf0f79740f3592b205a9d2839574c121628008376cc7a66fb092f"
 
       def install
         bin.install "prntenv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jcouture/prntenv/releases/download/0.1.1/prntenv_0.1.1_darwin_arm64.tar.gz"
-      sha256 "e5cb1a12ac5e106122f41ca13213921f1d46252eb9d062937450acacd93685aa"
+      url "https://github.com/jcouture/prntenv/releases/download/0.1.5/prntenv_0.1.5_darwin_arm64.tar.gz"
+      sha256 "d5f47410045d899df33effbcb3c22da3046f795dae86beee6e003b0b00837f57"
 
       def install
         bin.install "prntenv"
@@ -27,25 +27,25 @@ class Prntenv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/jcouture/prntenv/releases/download/0.1.1/prntenv_0.1.1_linux_armv6.tar.gz"
-      sha256 "c9589d06ad242f63b8f2885bedfd483c10906f6d93f16024f7b1cf15c00ced16"
-
-      def install
-        bin.install "prntenv"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jcouture/prntenv/releases/download/0.1.1/prntenv_0.1.1_linux_arm64.tar.gz"
-      sha256 "c660e9c5a5581424b35368ce33fbc575d4392b0f09c469580d87a2441f3e905c"
+      url "https://github.com/jcouture/prntenv/releases/download/0.1.5/prntenv_0.1.5_linux_arm64.tar.gz"
+      sha256 "1e35e94f7575273c5d63b9cefeb33ec7c849583af923eff412bf1262f4d7c40c"
 
       def install
         bin.install "prntenv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jcouture/prntenv/releases/download/0.1.1/prntenv_0.1.1_linux_amd64.tar.gz"
-      sha256 "dd5a0d64f228e0524cfa0b0e1350bf951a51e502c33b513294fb8e402e049b99"
+      url "https://github.com/jcouture/prntenv/releases/download/0.1.5/prntenv_0.1.5_linux_amd64.tar.gz"
+      sha256 "8b4b1025205fac83a5737ff274f96d63f880766211d0c000b6f2c57ac112d32c"
+
+      def install
+        bin.install "prntenv"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/jcouture/prntenv/releases/download/0.1.5/prntenv_0.1.5_linux_armv6.tar.gz"
+      sha256 "b973a55359f923d090f555beea090723b856b22f40d324e6840c20a67dfa86a7"
 
       def install
         bin.install "prntenv"
